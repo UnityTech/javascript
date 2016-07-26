@@ -749,32 +749,6 @@ Other Style Guides
     };
     ```
 
-  <a name="functions--reassign-params"></a><a name="7.13"></a>
-  - [7.13](#functions--reassign-params) Never reassign parameters. eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
-
-    > Why? Reassigning parameters can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in V8.
-
-    ```javascript
-    // bad
-    function f1(a) {
-      a = 1;
-    }
-
-    function f2(a) {
-      if (!a) { a = 1; }
-    }
-
-    // good
-    function f3(a) {
-      const b = a || 1;
-    }
-
-    function f4(a = 1) {
-    }
-    ```
-
-**[⬆ back to top](#table-of-contents)**
-
 ## Arrow Functions
 
   <a name="arrows--use-them"></a><a name="8.1"></a>
@@ -2020,39 +1994,6 @@ Other Style Guides
     ];
 
     return arr;
-    ```
-
-  <a name="whitespace--padded-blocks"></a><a name="18.8"></a>
-  - [18.8](#whitespace--padded-blocks) Do not pad your blocks with blank lines. eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks.html) jscs:  [`disallowPaddingNewlinesInBlocks`](http://jscs.info/rule/disallowPaddingNewlinesInBlocks)
-
-    ```javascript
-    // bad
-    function bar() {
-
-      console.log(foo);
-
-    }
-
-    // also bad
-    if (baz) {
-
-      console.log(qux);
-    } else {
-      console.log(foo);
-
-    }
-
-    // good
-    function bar() {
-      console.log(foo);
-    }
-
-    // good
-    if (baz) {
-      console.log(qux);
-    } else {
-      console.log(foo);
-    }
     ```
 
   <a name="whitespace--in-parens"></a><a name="18.9"></a>
