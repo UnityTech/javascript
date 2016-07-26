@@ -1,0 +1,22 @@
+{
+  "extends": ["angular", "airbnb"],
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
+  "globals": {
+    "inject": true
+  },
+  "rules": {
+    "no-var": "off",
+    "comma-dangle": "off",
+    "no-spaced-func": "off",
+    "vars-on-top": "off",
+    "func-names": "off",
+    "no-param-reassign": "off",
+    "padded-blocks": "off",
+    "angular/ng_no_angular_mock": "off",
+    "angular/log": "off",
+    "angular/on-watch": "off"
+  }
+}
