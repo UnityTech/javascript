@@ -1,16 +1,9 @@
-# Airbnb JavaScript Style Guide() {
+# Unity JavaScript Style Guide() {
 
 *A mostly reasonable approach to JavaScript*
 
-[![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)
-[![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb-base.svg)](https://www.npmjs.com/package/eslint-config-airbnb-base)
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/airbnb/javascript?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 Other Style Guides
  - [ES5](es5/)
- - [React](react/)
- - [CSS & Sass](https://github.com/airbnb/css)
- - [Ruby](https://github.com/airbnb/ruby)
 
 ## Table of Contents
 
@@ -104,25 +97,6 @@ Other Style Guides
     // good
     const a = 1;
     const b = 2;
-    ```
-
-  <a name="references--disallow-var"></a><a name="2.2"></a>
-  - [2.2](#references--disallow-var) If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
-
-    > Why? `let` is block-scoped rather than function-scoped like `var`.
-
-    ```javascript
-    // bad
-    var count = 1;
-    if (true) {
-      count += 1;
-    }
-
-    // good, use the let.
-    let count = 1;
-    if (true) {
-      count += 1;
-    }
     ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
@@ -2194,53 +2168,6 @@ Other Style Guides
       superPower: 'computers',
     };
     ```
-
-  <a name="commas--dangling"></a><a name="19.2"></a>
-  - [19.2](#commas--dangling) Additional trailing comma: **Yup.** eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle.html) jscs: [`requireTrailingComma`](http://jscs.info/rule/requireTrailingComma)
-
-    > Why? This leads to cleaner git diffs. Also, transpilers like Babel will remove the additional trailing comma in the transpiled code which means you don't have to worry about the [trailing comma problem](es5/README.md#commas) in legacy browsers.
-
-    ```javascript
-    // bad - git diff without trailing comma
-    const hero = {
-         firstName: 'Florence',
-    -    lastName: 'Nightingale'
-    +    lastName: 'Nightingale',
-    +    inventorOf: ['coxcomb chart', 'modern nursing']
-    };
-
-    // good - git diff with trailing comma
-    const hero = {
-         firstName: 'Florence',
-         lastName: 'Nightingale',
-    +    inventorOf: ['coxcomb chart', 'modern nursing'],
-    };
-
-    // bad
-    const hero = {
-      firstName: 'Dana',
-      lastName: 'Scully'
-    };
-
-    const heroes = [
-      'Batman',
-      'Superman'
-    ];
-
-    // good
-    const hero = {
-      firstName: 'Dana',
-      lastName: 'Scully',
-    };
-
-    const heroes = [
-      'Batman',
-      'Superman',
-    ];
-    ```
-
-**[⬆ back to top](#table-of-contents)**
-
 
 ## Semicolons
 
