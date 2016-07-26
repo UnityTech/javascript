@@ -1,9 +1,6 @@
 # Unity JavaScript Style Guide() {
 
-*A mostly reasonable approach to JavaScript*
-
-Other Style Guides
- - [ES5](es5/)
+Please use the `eslintrc.json` provided here as the `.eslintrc.json` for your repos.
 
 ## Table of Contents
 
